@@ -8,7 +8,6 @@ dotenv.config()
 
 const api_key = process.env.API_KEY
 
-
 const app = express()
 
 // body-parser
@@ -16,26 +15,33 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
+
+// view engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 // FORM
 app.get('/', (req, res) => {
-    res.render('index.html')
+    res.render('index')
 })
 
 // RESULT
 app.post('/film', async (req, res) => {
-    console.log("/post route called")
-    const filmTitle = req.body.movie
+    console.log("/film route called")
+    const filmTitle = req.body.title
     const filmYear = req.body.year
+
     const api_url = `http://www.omdbapi.com/?apikey=${api_key}&s=${filmTitle}&y=${filmYear}`
-    const options = {
-        "method": "POST"
-    }
-    const response = await fetch(api_url, options)
-    .then(res => res.json())
-    .catch(e => console.log(e))
-    res.json(response)
+    const response = await fetch(api_url)
+    const data = await response.json()
+    const poster = data.Search[0].Poster
+
+    res.render('result', {
+        title: filmTitle,
+        year: filmYear,
+        poster: poster
+    })
 })
 
 // start server

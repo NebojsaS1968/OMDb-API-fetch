@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    form(action="/film" method="post")
+        input(type="text", name="title", placeholder="Movie search...", id="filmTitle")
+        br
+        br
+        input(type="text", name="year", placeholder="Year", id="filmYear")
+        br
+        br
+        input(type="submit", value="Search", id="search")

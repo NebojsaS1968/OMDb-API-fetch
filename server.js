@@ -32,27 +32,35 @@ app.post('/film', async (req, res) => {
     const filmTitle = req.body.title
     const filmYear = req.body.year
 
-    const api_url = `http://www.omdbapi.com/?apikey=${api_key}&s=${filmTitle}&y=${filmYear}`
+    const api_url = `http://www.omdbapi.com/?apikey=${api_key}&t=${filmTitle}&y=${filmYear}`
     const response = await fetch(api_url)
 
-    // CANT SEEM TO HANDLE ERRORS
-    // HOW TO CHECK IF THE TITLE IS CORRECT
-    // HOW TO LOOP THROUGH THE DATA ARRAY
-    if(!response){
-        console.log(2)
-        res.render('error')
-    } else {
-        const data = await response.json() 
-        const poster = data.Search[0].Poster
-        const imdbId = data.Search[0].imdbID
-        res.render('result', {
-            title: filmTitle,
-            year: filmYear,
-            poster: poster,
-            imdbId: imdbId
-        })
-    }
+    const data = await response.json()
+    //console.log(data)
+    const title = data.Title 
+    const year = data.Year
+    const dir = data.Director
+    const poster = data.Poster
+    const imdbId = data.imdbID
+    const rating = data.imdbRating
+    const metascore = data.Metascore
+    const country = data.Country
+    const plot = data.Plot
+    const votes = data.imdbVotes
+    res.render('result', {
+        title,
+        year,
+        poster,
+        imdbId,
+        dir,
+        rating,
+        metascore,
+        country,
+        plot,
+        votes
+    })
 })
+
 
 // start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

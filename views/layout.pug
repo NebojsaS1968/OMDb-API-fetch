@@ -2,7 +2,17 @@ doctype html
 html
     head
         title OMDb movie search
-        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="style1.css")
     body 
-        .main
-            block content
+        header
+            .search-form
+                .container
+                    form(action="/film" method="post")
+                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle")
+                        img(src="search.png", alt="")
+                        br
+                        br
+                        input(type="text", name="year", placeholder="Year", id="filmYear")
+                        input(type="submit", value="Search", id="search")
+                        br
+    block content

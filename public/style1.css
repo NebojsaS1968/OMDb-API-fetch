@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    padding: 50px 50px 50px 50px;
+    background-color: #222;
+}
+
+.search-form{
+    position: absolute;
+    right: 0; /* moving all the way to the right */
+    padding-right: 250px;
+}
+
+input[type=text]{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 12px; /* rounding up corners */
+    width: 100%;
+    background-color: #222; /* same color as the heading */
+    padding-left: 60px;
+    border: none;
+    border-bottom: 2px solid red;
+    caret-color: red; /* color of cursor while inside input */
+    color: white;
+}
+
+input:focus{
+    outline: none; /* removing outline of focused input */
+}
+
+::placeholder{
+    color: red; /* color of placeholder inside inputs */
+}
+
+.container{
+    position: relative;
+}
+
+form img{
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+#search{
+    position: absolute;
+    font-size: 20px;
+    border-radius: 12px;
+    padding: 22px;
+    margin-left: 40px;
+    margin-top: -40px;
+}
+
+#search:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

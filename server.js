@@ -36,7 +36,13 @@ app.post('/film', async (req, res) => {
     const response = await fetch(api_url)
 
     const data = await response.json()
-    //console.log(data)
+
+    if(data.Response === 'False'){
+        return res.render('error', {
+            error: data.Error
+        })
+    }
+
     const title = data.Title 
     const year = data.Year
     const dir = data.Director

@@ -5,14 +5,17 @@ html
         link(rel="stylesheet", href="style1.css")
     body 
         header
+            .logo
+                h2
+                    a(href="/") OMDb
             .search-form
                 .container
                     form(action="/film" method="post")
-                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle")
+                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle", required)
                         img(src="search.png", alt="")
                         br
                         br
-                        input(type="text", name="year", placeholder="Year", id="filmYear")
+                        input(type="text", name="year", placeholder="Year (optional)", id="filmYear")
                         input(type="submit", value="Search", id="search")
                         br
     block content

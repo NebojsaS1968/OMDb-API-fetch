@@ -1,14 +1,18 @@
 extends layout
 
 block content
-    h2 #{title} (#{year})
-    h3 &#9733; #{rating} (#{votes})
-    hr
-    img(src="" + poster, alt="" + title, width="300", height="400")
-    br
-    br
-    button(type="button") 
-        a(href="https://www.imdb.com/title/" + imdbId, target="_blank") More info on IMDb
-    hr
-    h3 Directed by #{dir}
-    h3 Plot: #{plot}
+    .result-component
+        .title-rating
+            h2.title #{title} (#{year})
+            img.camera(src="camera.png", alt="")
+            h3.rating &#9733; #{rating} (#{votes})
+        br    
+        hr
+        img.poster(src="" + poster, alt="" + title, width="300", height="400")
+        br
+        br
+        button(type="button") 
+            a(href="https://www.imdb.com/title/" + imdbId, target="_blank") More info on IMDb
+        hr
+        h3 Directed by #{dir}
+        h3 Plot: #{plot}

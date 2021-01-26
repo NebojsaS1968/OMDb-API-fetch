@@ -8,7 +8,7 @@ header{
     position: relative;
     height: 250px;
     width: 100%;
-    padding: 50px 50px 50px 50px;
+    padding: 60px;
     background-color: #222;
 }
 
@@ -64,4 +64,55 @@ form img{
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+.logo{
+    position: absolute;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.logo a{
+    text-decoration: none;
+    color: snow;
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.error{
+    font-size: 50px;
+    align-self: center;
+}
+
+.result-component{
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.title{
+    font-size: 30px;
+    padding-left: 10px;
+    padding-top: 5px;
+    flex: 3;
+}
+
+.rating{
+    font-size: 30px;
+    flex: 1;
+}
+
+.title-rating{
+    position: relative;
+    display: flex;
+}
+
+.camera{
+    height: 50px;
+    width: 50px;
+    flex: 1;
+    padding-right: 150px;
+    background: transparent;
 }

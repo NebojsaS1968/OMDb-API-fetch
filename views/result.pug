@@ -1,9 +1,6 @@
 extends layout
 
 block content
-    .all-result
-        .bckg
-            img(src="", alt="alt")
         .result-component
             .title-rating
                 h2.title #{title} (#{year})
@@ -20,4 +17,5 @@ block content
                     a(href="https://www.imdb.com/title/" + imdbId, target="_blank") More info on IMDb
             .plot-director
                 h3 Directed by: #{dir}
+                br
                 h3 Plot: #{plot}

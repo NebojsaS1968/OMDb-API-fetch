@@ -13,11 +13,17 @@ html
             .search-form
                 .container
                     form(action="/film" method="post")
-                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle", required)
+                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle", required, list="filmList")
                         img(src="../images/search.png", alt="")
                         br
                         br
                         input(type="text", name="year", placeholder="Year (optional)", id="filmYear")
                         input(type="submit", value="Search", id="search")
                         br
-    block content
+                        datalist(id="filmList")
+                            option(value="The Godfather") 1972
+                            option(value="Persona") 1966
+                            option(value="Inception") 2010
+        .all-result
+            img(src="../images/cinema.jpg", alt="cinema")                
+        block content

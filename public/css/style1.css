@@ -72,13 +72,20 @@ form img{
     font-size: 30px;
     padding-top: 20px;
     padding-left: 40px;
+    display: flex;
 }
 
-.logo a{
+#omdb a{
     text-decoration: none;
     color: snow;
     border: 2px solid red;
     padding: 10px;
+}
+
+#docs a{
+    padding-left: 30px;
+    text-decoration: none;
+    color: snow;
 }
 
 .error{

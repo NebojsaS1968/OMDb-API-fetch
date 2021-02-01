@@ -5,11 +5,14 @@ html
         link(rel="stylesheet", href="../css/style1.css")
         link(rel='preconnect' href='https://fonts.gstatic.com')
         link(href='https://fonts.googleapis.com/css2?family=Nunito&display=swap' rel='stylesheet')
+        link(rel="icon" type="image/png" href="../images/filmIcon.png")
     body 
         header
             .logo
-                h2
+                h2#omdb
                     a(href="/") OMDb
+                h2#docs
+                    a(href="http://www.omdbapi.com/", target="_blank") Docs
             .search-form
                 .container
                     form(action="/film" method="post")
@@ -20,10 +23,13 @@ html
                         input(type="text", name="year", placeholder="Year (optional)", id="filmYear")
                         input(type="submit", value="Search", id="search")
                         br
+                        //- datalist tag for some autosuggestions upon clicking input field
+                            id of datalist goes to input attribute called 'list'
                         datalist(id="filmList")
                             option(value="The Godfather") 1972
                             option(value="Persona") 1966
                             option(value="Inception") 2010
         .all-result
-            img(src="../images/cinema.jpg", alt="cinema")                
+            img(src="../images/cinema.jpg", alt="cinema") 
+        script(src="../js/index.js")               
         block content

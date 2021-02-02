@@ -16,8 +16,9 @@ html
             .search-form
                 .container
                     form(action="/film" method="post")
-                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle", required, list="filmList")
+                        input(type="text", name="title", placeholder="Movie search...", id="filmTitle", required)
                         img(src="../images/search.png", alt="")
+                        #match-list
                         br
                         br
                         input(type="text", name="year", placeholder="Year (optional)", id="filmYear")

@@ -134,6 +134,18 @@ form img{
     z-index: 20;
 }
 
+@media screen and (max-width: 1000px){
+    #docs a{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 850px){
+    #omdb a{
+        visibility: hidden;
+    }
+}
+
 .title{
     font-size: 30px;
     padding-left: 10px;

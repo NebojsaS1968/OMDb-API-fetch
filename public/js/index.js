@@ -19,15 +19,21 @@ const searchFilms = async (searchText) => {
 
     // Clear HTML and array when text in the input reaches 0
     if(searchText.length === 0){
-        matches = []
         matchList.style.visibility = 'hidden'
     }
 
-    matchList.addEventListener('click', () => {
-        clickMatch(matches)
+    // Filling up the input field with clicked autosuggested paragraph
+    matchList.addEventListener('click', (event) => {
+        const clickedPara = event.target.innerHTML
+        input.value = clickedPara
+        //console.log(x)
+        matchList.innerHTML = ''
+        matchList.style.visibility = 'hidden'
     })
 
     //console.log(matches)
+
+    // Turn matches into HTML and output on the page
     outputHtml(matches)
 }
 
@@ -42,15 +48,6 @@ const outputHtml = (matches) => {
     }
 
 }
-
-// PROBLEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-const clickMatch = (matches) => {
-    matches.forEach(match => {
-        input.value = match.imdb250
-    })
-    matchList.style.visibility = 'hidden'
-}
-
 
 input.addEventListener('input', () => {
     searchFilms(input.value)

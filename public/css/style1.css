@@ -135,15 +135,41 @@ form img{
 }
 
 @media screen and (max-width: 1000px){
+    header{
+        padding-left: 10px;
+    }
+
     #docs a{
         position: absolute;
-        visibility: hidden;
+        left: 0;
+        padding-top: 90px;
+        padding-left: 50px;
     }
 }
 
-@media screen and (max-width: 850px){
-    #omdb a{
-        visibility: hidden;
+/* MOBILE DEVICES
+    TO BE CONTINUED !!!!
+*/
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
+
+    .logo{
+        font-size: 15px;
+    }
+
+    .search-form{
+        padding-right: 5px;
+    }
+
+    input[type=text]{
+        font-size: 15px;
+    }
+
+    #search{
+        font-size: 15px;
+    }
+
+    .result-component{
+        background-color: #222;
     }
 }
 

@@ -32,4 +32,4 @@ $npm run dev
 
 Here is example:
 
-![Example](./public/images/example.png)
+![Example](./images/example.png)

@@ -5,6 +5,7 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 ## Table of contents
 
 - [Description](#description)
+- [Example](#example)
 - [Technologies](#technologies)
 - [Setup](#setup)
 
@@ -14,6 +15,10 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 - It displays basic data about the film upon serach (title, imdb grade, number of reviews, poster, ...) and styles it
 - Provides IMDb link to any movie that is searched
 - Supports autocomplete functionality (only for films that are in IMDb top 250 list)
+
+## Example
+
+![Example](./images/example.png)
 
 ## Technologies
 

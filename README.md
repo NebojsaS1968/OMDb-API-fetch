@@ -29,3 +29,7 @@ To run the development server (nodemon):
 ```
 $npm run dev
 ```
+
+Here is example:
+
+![Example](./public/images/example.png)

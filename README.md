@@ -11,7 +11,7 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 ## Description
 
 - Enables the users on client side to search for any movie in the OMDb database
-- It displays basic data about the film upon serach (title, imdb grade, number of reviews, poster, ...)
+- It displays basic data about the film upon serach (title, imdb grade, number of reviews, poster, ...) and styles it
 - Provides IMDb link to any movie that is searched
 - Supports autocomplete functionality (only for films that are in IMDb top 250 list)
 
@@ -20,6 +20,7 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 - Node.js (Express)
 - node-fetch
 - Pug (Jade) template engine
+- CSS
 
 ## Setup
 

@@ -18,7 +18,11 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 
 ## Example
 
-![Example](./images/example.png)
+App looks like the image in the path:
+
+```
+./public/images/example.png
+```
 
 ## Technologies
 

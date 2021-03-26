@@ -4,9 +4,9 @@ Full stack app that fetches data from external public [OMDb API](http://www.omdb
 
 ## Table of contents
 
-[Description](#description)
-[Technologies](#technologies)
-[Setup](#setup)
+- [Description](#description)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
 ## Description
 
